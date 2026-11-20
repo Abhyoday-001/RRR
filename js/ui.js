@@ -8,8 +8,8 @@
   DS.airportMap = net.airportMap;
   // colours for the canvas charts, switched with the theme
   const TC = () => DS.themeName === 'light'
-    ? { axis: '#5b6f85', grid: '#d8e1ea', head: '#f1f5f9', headTxt: '#4b5f75', headLine: '#c4d0dd', rowAlt: 'rgba(15,40,70,.03)', selRow: 'rgba(10,124,196,.16)', txt: '#51657b', txtSel: '#0e1b2b', sliver: '#a9b8c8', nowLine: '#0e1b2b', nowBg: '#0e1b2b', nowTxt: '#ffffff', selOutline: '#0e1b2b', clear: '#94a3b8', legend: '#4b5f75', band: 'rgba(110,80,220,.13)', bandHead: 'rgba(110,80,220,.55)' }
-    : { axis: '#6a7ba0', grid: '#1b2738', head: '#0e141d', headTxt: '#7d8db0', headLine: '#26364a', rowAlt: 'rgba(255,255,255,.018)', selRow: 'rgba(76,201,240,.13)', txt: '#8696ad', txtSel: '#ffffff', sliver: '#34445c', nowLine: '#ffffff', nowBg: '#ffffff', nowTxt: '#05101f', selOutline: '#ffffff', clear: '#64748b', legend: '#9fb0d4', band: 'rgba(167,139,250,.14)', bandHead: 'rgba(167,139,250,.55)' };
+    ? { axis: '#64748b', grid: '#e2e8f0', head: '#f8fafc', headTxt: '#e11d68', headLine: '#cbd5e1', rowAlt: 'rgba(225,29,104,.03)', selRow: 'rgba(124,58,237,.14)', txt: '#475569', txtSel: '#0f172a', sliver: '#0284c7', nowLine: '#e11d68', nowBg: '#e11d68', nowTxt: '#ffffff', selOutline: '#0284c7', clear: '#94a3b8', legend: '#64748b', band: 'rgba(225,29,104,.14)', bandHead: 'rgba(225,29,104,.55)' }
+    : { axis: '#a5a5b5', grid: 'rgba(139,92,246,.15)', head: '#11121a', headTxt: '#ff4f91', headLine: 'rgba(255,79,145,.28)', rowAlt: 'rgba(255,79,145,.02)', selRow: 'rgba(139,92,246,.25)', txt: '#a5a5b5', txtSel: '#ffffff', sliver: '#35d6ff', nowLine: '#ff2d78', nowBg: '#ff2d78', nowTxt: '#ffffff', selOutline: '#35d6ff', clear: '#888b9e', legend: '#c4c5db', band: 'rgba(255,45,120,.18)', bandHead: 'rgba(255,45,120,.65)' };
 
   const S = {
     net, scenario: 'bom-monsoon', weather: [], plan: [], now: 480, playing: false, speed: 15,

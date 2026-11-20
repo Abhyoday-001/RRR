@@ -8,26 +8,26 @@
   const mercY = lat => Math.log(Math.tan(PI / 4 + clampLat(lat) * RAD / 2)) / RAD;       // degree-equivalent mercator ordinate
   const invMerc = v => (2 * Math.atan(Math.exp(v * RAD)) - PI / 2) / RAD;
   const KM_DEG = 111.32;
-  const GEN = ['#ef4444', '#f97316', '#f59e0b', '#eab308', '#a3a3a3'];
-  const colDelay = d => d <= 15 ? '#34d399' : d <= 45 ? '#fbbf24' : d <= 120 ? '#fb923c' : '#f87171';
+  const GEN = ['#ff2d78', '#ff8a45', '#ffc247', '#35d6ff', '#888b9e'];
+  const colDelay = d => d <= 15 ? '#34d399' : d <= 45 ? '#ff8a45' : d <= 120 ? '#ff6838' : '#ff2d78';
   const colGen = g => g < 0 ? '#34d399' : GEN[Math.min(g, 4)];
   const WX = DS.WXT;
 
   // ---------------------------------------------------------------- palettes
   const PALS = {
     dark: {
-      name: 'dark', ocean0: '#071a2b', ocean1: '#0b2a42', grid: 'rgba(150,200,235,.07)', gridText: 'rgba(160,200,230,.38)',
-      land: [[75, '#8f9ea8'], [62, '#46584f'], [48, '#2c4a38'], [32, '#4a4a32'], [18, '#34503a'], [0, '#1f4a35'], [-18, '#2f4f38'], [-32, '#4d4b34'], [-50, '#34503e'], [-60, '#8f9ea8']],
-      border: 'rgba(190,215,230,.30)', coast: 'rgba(130,205,240,.80)', shelf: 'rgba(90,170,220,.16)', label: 'rgba(215,230,240,.42)',
-      route: 'rgba(150,200,255,.11)', halo: 'rgba(6,16,28,.88)', apRing: '#f1f6fb', apFill: '#0a1626', apText: '#e8f1f8', night: [4, 9, 24],
-      nightAlpha: 0.62, shadow: 'rgba(0,0,0,.40)', plane: '#06101f'
+      name: 'dark', ocean0: '#07080f', ocean1: '#0e101c', grid: 'rgba(139,92,246,.09)', gridText: 'rgba(255,79,145,.45)',
+      land: [[75, '#2b2a3a'], [62, '#202434'], [48, '#1b2332'], [32, '#2a2336'], [18, '#1e2434'], [0, '#192834'], [-18, '#1e2534'], [-32, '#282334'], [-50, '#1c2432'], [-60, '#2b2a3a']],
+      border: 'rgba(139,92,246,.38)', coast: 'rgba(53,214,255,.85)', shelf: 'rgba(255,79,145,.14)', label: 'rgba(240,240,255,.50)',
+      route: 'rgba(255,79,145,.18)', halo: 'rgba(8,9,13,.90)', apRing: '#ff4f91', apFill: '#0a0b12', apText: '#ffffff', night: [6, 7, 14],
+      nightAlpha: 0.65, shadow: 'rgba(0,0,0,.55)', plane: '#05060a'
     },
     light: {
-      name: 'light', ocean0: '#bcd9ec', ocean1: '#a5cbe4', grid: 'rgba(40,90,130,.10)', gridText: 'rgba(30,70,105,.55)',
-      land: [[75, '#f4f7f9'], [62, '#d5e0d3'], [48, '#cddfb8'], [32, '#e7dcb9'], [18, '#c3d9a5'], [0, '#b4d19a'], [-18, '#c3d8a6'], [-32, '#e5d9b6'], [-50, '#cbddb8'], [-60, '#f4f7f9']],
-      border: 'rgba(90,110,125,.45)', coast: 'rgba(55,105,140,.85)', shelf: 'rgba(255,255,255,.35)', label: 'rgba(40,60,75,.50)',
-      route: 'rgba(30,80,140,.12)', halo: 'rgba(255,255,255,.90)', apRing: '#10304a', apFill: '#ffffff', apText: '#10263a', night: [20, 35, 70],
-      nightAlpha: 0.34, shadow: 'rgba(20,40,60,.30)', plane: '#12263c'
+      name: 'light', ocean0: '#dbeafe', ocean1: '#bfdbfe', grid: 'rgba(124,58,237,.10)', gridText: 'rgba(225,29,104,.55)',
+      land: [[75, '#f5f3ff'], [62, '#ede9fe'], [48, '#e0e7ff'], [32, '#fce7f3'], [18, '#f3e8ff'], [0, '#e0f2fe'], [-18, '#f3e8ff'], [-32, '#fce7f3'], [-50, '#e0e7ff'], [-60, '#f5f3ff']],
+      border: 'rgba(124,58,237,.35)', coast: 'rgba(2,132,199,.85)', shelf: 'rgba(255,255,255,.45)', label: 'rgba(30,27,75,.60)',
+      route: 'rgba(225,29,104,.14)', halo: 'rgba(255,255,255,.92)', apRing: '#e11d68', apFill: '#ffffff', apText: '#171124', night: [30, 20, 60],
+      nightAlpha: 0.32, shadow: 'rgba(30,10,50,.25)', plane: '#171124'
     }
   };
   DS.pal = PALS.dark; DS.themeName = 'dark';
